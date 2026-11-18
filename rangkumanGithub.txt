@@ -1,0 +1,101 @@
+RANGKUMAN PEMBELAJARAN GITHUB
+=============================
+
+1. TOPIK GITHUB (GITHUB TOPICS)
+   - Topic adalah label/tag untuk mengklasifikasikan repositori agar mudah ditemukan.
+   - Cara menambah: buka repo > klik ikon gear di "About" > isi Topics > Save changes.
+   - Maksimal 20 topic per repositori.
+   - Format: huruf kecil, angka, dan tanda hubung; maksimal 50 karakter.
+   - Pencarian: gunakan kualifikasi "topic:nama-topic" di kolom search GitHub.
+   - Halaman populer: github.com/topics/
+
+2. PERSIAPAN GIT
+   - Instal Git dari git-scm.com.
+   - Konfigurasi identitas:
+     git config --global user.name "Nama Anda"
+     git config --global user.email "email@anda.com"
+
+3. UPLOAD PROYEK KE GITHUB
+   A. Lewat Web GitHub:
+      - Klik "+" > New repository > isi nama > Create repository.
+      - Klik "Add file" > "Upload files" > drag & drop file/folder > Commit changes.
+   B. Lewat Command Line:
+      - cd ke folder proyek
+      - git init
+      - git add .
+      - git commit -m "Initial commit"
+      - git remote add origin https://github.com/username/nama-proyek.git
+      - git push -u origin main
+
+4. DOWNLOAD PROYEK DARI GITHUB
+   - Download ZIP: klik tombol hijau "Code" > "Download ZIP". Cepat, tetapi tanpa riwayat commit.
+   - Git Clone: git clone https://github.com/username/nama-repo.git
+     Menyertakan seluruh riwayat commit dan branch.
+
+5. EDIT DATA PROYEK
+   A. Lewat Web GitHub:
+      - Buka file > klik ikon pensil > edit > isi commit message > Commit changes.
+   B. Lewat Lokal:
+      - Edit file di komputer > simpan.
+      - git add .
+      - git commit -m "Menjelaskan perubahan"
+      - git push origin main
+
+6. HAPUS FILE/FOLDER
+   A. Lewat Web GitHub:
+      - Buka file/folder > klik ikon titik tiga > Delete file / Delete directory > Commit changes.
+   B. Lewat Command Line:
+      - Hapus file: git rm nama-file.txt
+      - Hapus folder: git rm -r nama-folder
+      - git commit -m "Menghapus file/folder"
+      - git push origin main
+
+7. PUSH DAN PULL
+   - git push origin main: mengirim commit dari lokal ke GitHub.
+   - git pull origin main: mengambil perubahan terbaru dari GitHub ke lokal.
+   - Biasakan pull sebelum mulai bekerja untuk menghindari konflik.
+
+8. KOLABORASI TANPA MENGUBAH PROYEK ASLI (FORK & PULL REQUEST)
+   - Fork: buat salinan repositori asli ke akun GitHub sendiri.
+   - Clone fork ke lokal:
+     git clone https://github.com/username-anda/nama-proyek.git
+   - Hubungkan ke repositori asli:
+     git remote add upstream https://github.com/username-asli/nama-proyek.git
+   - Buat branch baru:
+     git switch -c fitur-baru-saya
+   - Lakukan perubahan, lalu:
+     git add .
+     git commit -m "Menambahkan fitur baru"
+     git push -u origin fitur-baru-saya
+   - Buka Pull Request di GitHub: klik "Compare & pull request".
+   - Sinkronisasi fork dengan repositori asli:
+     git fetch upstream
+     git switch main
+     git merge upstream/main
+     git push origin main
+     Atau gunakan tombol "Sync fork" di GitHub.
+
+9. MEMBUAT REPOSITORI PUBLIK DAN PRIVAT
+   - Langkah: klik "+" > New repository > isi nama & deskripsi > pilih visibilitas.
+   - Public: dapat dilihat siapa saja. Cocok untuk open-source/portofolio.
+   - Private: hanya Anda dan collaborator yang diundang. Cocok untuk proyek pribadi/rahasia.
+   - Visibilitas dapat diubah melalui Settings > General.
+
+10. FITUR-FITUR TERBARU GITHUB (2026)
+   - GitHub Copilot Fusion: menggabungkan beberapa model AI secara otomatis.
+   - Copilot Code Review: adaptive effort, deteksi rahasia, konteks lintas repositori.
+   - Agentic Workflows (GA): agen AI di GitHub Actions untuk triase issue dan analisis CI.
+   - Multi-Cloud Compute: runner GitHub Actions lebih andal dan cepat.
+   - Dukungan VNET Failover untuk runner Azure.
+   - Tab "Security & quality": gabungan temuan keamanan dan kualitas kode.
+   - AI Scan: pemindaian kerentanan seluruh repositori.
+   - Push Protection: deteksi rahasia berbasis classifier.
+   - Pencarian Issue lebih baik dan Hierarchy View di GitHub Projects.
+
+KESIMPULAN
+-----------
+GitHub digunakan untuk menyimpan, mengelola, dan berkolaborasi pada proyek kode.
+Alur dasar: upload/download, edit, hapus, push/pull.
+Untuk kolaborasi aman tanpa mengubah proyek asli: gunakan Fork + Pull Request.
+Repositori dapat bersifat publik atau privat sesuai kebutuhan.
+GitHub terus menghadirkan fitur AI, keamanan, dan otomatisasi pada 2026.
